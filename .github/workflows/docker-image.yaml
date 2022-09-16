@@ -23,7 +23,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./udagram-reverseproxy
-          file: ./Dockerfile
+          file: ./udagram-reverseproxy/Dockerfile
           push: true
           tags: ${{secrets.DOCKER_USER}}/reverseproxy:v1
 
