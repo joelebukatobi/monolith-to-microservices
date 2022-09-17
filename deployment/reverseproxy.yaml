@@ -17,6 +17,11 @@ spec:
           image: docker.io/joelebukatobi/reverseproxy:v1
           ports:
             - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: env-config
+            - secretRef:
+                name: env-secret
           resources:
             limits:
               cpu: 1000m
